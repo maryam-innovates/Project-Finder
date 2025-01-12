@@ -1,1 +1,58 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Project Connect Forum</title><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"><link rel="icon" type="image/x-icon" href="/favicon.88a0500d.png"><style>body{color:#333;background-color:#f8f8f8;margin:0;padding:0;font-family:Roboto,sans-serif}header{background-color:#fff;border-bottom:1px solid #ddd;justify-content:space-between;align-items:center;padding:20px;display:flex}header img{height:50px}nav ul{margin:0;padding:0;list-style:none;display:flex}nav ul li{margin-left:20px}nav ul li a{color:#333;font-weight:700;text-decoration:none}main{text-align:center;max-width:1200px;margin:0 auto;padding:20px}section{margin:20px 0}.intro h1{margin-bottom:10px;font-size:3em}.intro p{margin-bottom:20px;font-size:1.2em}.button{color:#fff;background-color:#007bff;border-radius:5px;padding:10px 20px;font-weight:700;text-decoration:none;display:inline-block}.button:hover{background-color:#0056b3}.about h2,.founder h2{margin-bottom:20px;font-size:2.5em}.about p,.founder p{font-size:1.2em;line-height:1.6}a{color:#007bff;text-decoration:none}a:hover{text-decoration:underline}footer{text-align:center;z-index:100;background-color:#fff;border-top:1px solid #ddd;width:100%;padding:10px 0;bottom:0}main{text-align:center;max-width:1200px;margin:0 auto;padding:20px;overflow-y:auto}html,body{box-sizing:border-box;height:100%;margin:0;padding:0}body.dark-mode{color:#fff;background-color:#121212}body.dark-mode header{background-color:#1e1e1e}body.dark-mode .button{color:#fff;background-color:#333}body.dark-mode footer{background-color:#1e1e1e}@media (width<=768px){header,nav ul{flex-direction:column;align-items:flex-start}nav ul li{margin-bottom:10px;margin-left:0}.intro h1{font-size:2em}.button{padding:8px 15px;font-size:.9em}.about p,.founder p{font-size:1em}}</style></head><body> <header> <a href="#"><img src="/logo.52ed8124.png" alt="Project Connect Forum Logo"></a> <button id="dark-mode-toggle">Dark Mode</button> <nav> <ul> <li><a href="/index.html">Home</a></li> <li><a href="/projecthub.html">Project Hub</a></li> <li><a href="https://www.instagram.com/arya.bugs/">Instagram</a></li> </ul> </nav> </header> <main> <section class="intro"> <h1>Welcome to Project Connect Forum</h1> <p>Your one-stop platform to discover and join extracurricular projects.</p> <a href="/projecthub.html" class="button">Go to Project Hub</a> </section> <section class="about"> <h2>About the Website</h2> <p>Project Finder is an innovative platform designed specifically for high school and middle school students, welcoming individuals from all backgrounds. The website provides a space for both juniors and seniors to discover or create passion projects. It encourages students to explore a range of extracurricular opportunities, develop leadership skills, and pursue their interests. With an emphasis on personal growth and community involvement, Project Finder aims to empower teens to take charge of their futures by joining or starting projects that ignite their passions.</p> </section> <section class="founder"> <h2>Website Founder</h2> <p>Maryam Nawaz is the founder of Project Finder, an initiative she created with a team of five talented individuals. Based in Lahore, Pakistan, Maryam is a passionate advocate for empowering teens through extracurriculars. Her platform offers students a chance to explore their interests, collaborate with others, and develop skills that will help them in their academic and personal lives. Maryam's goal is to foster a supportive environment where students can take the lead on projects that matter most to them. </p> </section> </main> <footer> <p>Reach us at <a href="mailto:example@gmail.com">example@gmail.com</a> or visit our <a href="https://www.instagram.com/arya.bugs/">Instagram</a></p> </footer> <script>document.getElementById("dark-mode-toggle").addEventListener("click",function(){document.body.classList.toggle("dark-mode"),this.innerText=document.body.classList.contains("dark-mode")?"Light Mode":"Dark Mode"});</script> </body></html>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/x-icon" href="/favicon.88a0500d.png">
+		<title>Project Hub - Project Connect Forum</title>
+		<link rel="stylesheet" href="/projecthub.3975e8a3.css">
+		<script type="module" src="/projecthub.c89bea41.js" defer></script>
+		<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js"></script>
+	</head>
+	<body>
+		<header>
+			<img src="/logo.52ed8124.png" alt="Project Connect Forum Logo">
+			<button id="dark-mode-toggle">Dark Mode</button>
+			<nav>
+				<ul>
+					<li>
+						<a href="/index.html">Home</a>
+					</li>
+					<li>
+						<a href="/projecthub.html">Project Hub</a>
+					</li>
+					<li>
+						<a href="https://www.instagram.com/arya.bugs/">Instagram</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section class="hero-section">
+				<h1>Projects</h1>
+				<p>Create Your Passion Project and Share with the Community!</p>
+				<button id="add-project-button" class="button">Add Project</button>
+			</section>
+			<section class="submit-project" id="project-form-container">
+				<h2>Add Your Passion Project:</h2>
+				<form id="project-form">
+					<input type="text" id="project-title" placeholder="Project Title" required>
+					<textarea id="project-description" placeholder="Project Description" required></textarea>
+					<input type="text" id="project-contact" placeholder="Contact (Email or Phone)" required>
+					<input type="text" id="project-field" placeholder="Field of Interest" required>
+					<button type="submit" class="button">Submit</button>
+				</form>
+			</section>
+			<section class="projects">
+				<h1>Project Hub</h1>
+				<p>Explore various extracurricular projects and join the ones that interest you!</p>
+				<div id="project-list"></div>
+			</section>
+		</main>
+		<footer>
+			<p>Reach us at our <a href="https://www.instagram.com/arya.bugs/">Instagram</a>
+			</p>
+		</footer>
+	</body>
+</html>
