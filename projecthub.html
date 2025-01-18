@@ -9,6 +9,7 @@
 		<script type="module" src="projecthub.js" defer></script>
 		<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js"></script>
+
 	</head>
 	<body>
 		<header>
@@ -17,13 +18,13 @@
 			<nav>
 				<ul>
 					<li>
-						<a href="index.html">Home</a>
+						<a class="au" href="index.html">Home</a>
 					</li>
 					<li>
-						<a href="projecthub.html">Project Hub</a>
+						<a class="au" href="projecthub.html">Project Hub</a>
 					</li>
 					<li>
-						<a href=https://www.instagram.com/projectfinderforum.fr/">Instagram</a>
+						<a class="au" href="https://www.instagram.com/arya.bugs/">Instagram</a>
 					</li>
 				</ul>
 			</nav>
@@ -40,21 +41,19 @@
 					<input type="text" id="project-title" placeholder="Project Title" required>
 					<textarea id="project-description" placeholder="Project Description" required></textarea>
 					<input type="text" id="project-contact" placeholder="Contact (Email or Phone or Insta or Website)" required>
+					<input type="text" id="project-contact" placeholder="Contact (Email or Phone)" required>
 					<input type="text" id="project-field" placeholder="Field of Interest" required>
 					<button type="submit" class="button">Submit</button>
 				</form>
 			</section>
 			<section class="projects">
 				<h1>Project Hub</h1>
-				<p>Explore various extracurricular projects and join the ones that interest you!</p>
+				<p id="P1">Explore various extracurricular projects and join the ones that interest you!</p>
 				<div id="project-list"></div>
 			</section>
 		</main>
-	<footer>
-			<p>Reach us at <a href="mailto:Project-Finder@outlook.com
-">Project-Finder@outlook.com
-</a> or visit our
-        <a href="https://www.instagram.com/projectfinderforum.fr/">Instagram</a>
+		<footer>
+			<p>Reach us at our <a href="https://www.instagram.com/arya.bugs/">Instagram</a>
 			</p>
 		</footer>
 	</body>
