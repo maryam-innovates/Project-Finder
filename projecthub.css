@@ -1,19 +1,20 @@
 body {
-    color: #333;
-    background-color: #f1f8fe;
+    color: #000000;
+    background-color: #B3E5FC;
     margin: 0;
     padding: 0;
     font-family: Roboto, sans-serif;
   }
   header {
-    background-color: #ffefff;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 30px;
-    display: flex;
+      background-color: #fff;
+      border-bottom: 2px solid #000000;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      display: flex
   }
   header img {
-    height: 50px;
+    height: 20px;
   }
   nav ul {
     margin: 0;
@@ -25,7 +26,7 @@ body {
     margin-left: 20px;
   }
   nav ul li a {
-    color: #333;
+    color: #000000;
     font-weight: 700;
     text-decoration: none;
   }
@@ -34,22 +35,22 @@ body {
   }
   .hero-section {
     text-align: center;
-    background-color: #b6f7fc;
+    background-color: #B3E5FC;
     border-radius: 10px;
     margin-bottom: 30px;
     padding: 50px 20px;
   }
   .hero-section h1 {
-    color: #333;
-    font-size: 2.5rem;
+    color: #000000;
+    font-size: 3rem;
   }
   .hero-section p {
-    color: #555;
-    font-size: 1.2rem;
+    color: #000000;
+    font-size: 1.5rem;
   }
   .button {
     color: #fff;
-    background-color: #f8b8d8;
+    background-color: #000000;
     border-radius: 5px;
     margin-top: 20px;
     padding: 12px 25px;
@@ -57,19 +58,21 @@ body {
     text-decoration: none;
   }
   .button:hover {
-    background-color: #ff8cbf;
+    background-color: #616c77;
     transition: background-color 0.3s;
+    box-shadow: 0px 5px 10px rgb(236, 165, 194);
   }
   footer {
     text-align: center;
     background-color: #ffefff;
+    border-top: 2px solid #000;
     width: 100%;
-    padding: 15px 0;
+    padding: 15px 0px;
     position: relative;
-    bottom: 0;
+    bottom: 0px;
   }
   footer a {
-    color: #333;
+    color: #000;
     text-decoration: none;
   }
   body.dark-mode {
@@ -80,7 +83,7 @@ body {
     background-color: #f8f8f8;
   }
   body.dark-mode .button {
-    color: #333;
+    color: #000000;
     background-color: #c6e2ff;
   }
   body.dark-mode footer {
@@ -109,7 +112,7 @@ body {
     border-radius: 5px;
     margin: 10px 0;
     padding: 15px;
-    box-shadow: 0 2px 5px #0000001a;
+    box-shadow: 20px 5px #000000;
   }
   .project h3 {
     margin-top: 0;
@@ -143,4 +146,12 @@ body {
   .submit-project h2 {
     text-align: center;
   }
-  
+  #P1 {
+    font-size: 20px;
+  }
+  .au:hover{
+    text-decoration: underline;
+  }
+  .button:hover{
+    text-decoration: underline;
+  }
